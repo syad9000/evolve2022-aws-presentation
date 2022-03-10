@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <entry key="REMOVE_TXT">https://phibetakappa.uga.edu</entry>
+	<entry key="S3BUCKETS">
+		<bucket>
+			<name>phibetakappastatic</name>
+			<start_path>/</start_path> <!-- folder on from main site which will become the new root content on the s3Bucket -->
+		</bucket>
+	</entry>
+	<entry key="RSS"> <!-- This feed will have a JSON version published for the following directory publishes -->
+		<directories feed="/_resources/rss/news.xml">
+			<directory>/news</directory>
+		</directories>
+	</entry>
+	<entry key="IGNORE"> <!-- Files you don't want to publish to Amazon S3 -->
+		<directories>
+			<directory>_training/</directory>
+			<directory>includes/</directory>
+			<directory>xsl/</directory>
+			<directory>php/</directory>
+			<directory>ou/</directory>
+		</directories>
+		<files>
+			<file>.htaccess</file>
+			<file>props.pcf</file>
+			<file>_nav.inc</file>
+		</files>
+	</entry>
+</config>

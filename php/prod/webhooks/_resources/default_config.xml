@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Example config when you are getting some files to store on S3 and keeping your original production server.
+Files are obtained via GET requests. The REMOVE_TXT will usually be the HTTP_ROOT of your site. 
+This is needed because the POST from the OmniCMS webhook will have the full URL in the filename.  You use this
+full URL to do the GET request, but remove it to post to Amazon S3
+-->
+<config>
+    <entry key="REMOVE_TXT">https://example.edu</entry> <!-- Text to strip out of the URL in the POST request data. Needed when getting the files from the Production server -->
+	<entry key="METHOD">GET</entry> <!-- Used when getting the files from the remote server. Only use when not hosting the full site on the data dispatch server -->
+	<entry key="S3BUCKETS">
+		<bucket>
+			<name>scripts</name> <!-- S3 Bucket name to create. This is for hosting some of your website content on S3 -->
+			<start_path>/</start_path> <!-- folder on from main site which will become the new root content on the s3Bucket -->
+		</bucket>
+		<bucket>
+			<name>example.edu</name> <!-- S3 Bucket name to create. This is for creating a website -->
+			<start_path>/</start_path> <!-- folder on from main site which will become the new root content on the s3Bucket -->
+		</bucket>
+		<bucket>
+			<name>www.example.edu</name> <!-- S3 Bucket name to create. This is for a WWW variation of your site. -->
+			<start_path>/subfolder</start_path> <!-- folder on from main site which will become the new root content on the s3Bucket -->
+		</bucket>
+	</entry>
+	<entry key="IGNORE"> <!-- Files you don't want to publish to Amazon S3 -->
+		<directories>
+			<directory>_training/</directory>
+			<directory>includes/</directory>
+			<directory>xsl/</directory>
+			<directory>php/</directory>
+			<directory>ou/</directory>
+		</directories>
+		<files>
+			<file>.htaccess</file>
+			<file>props.pcf</file>
+			<file>_nav.inc</file>
+		</files>
+	</entry>
+</config>

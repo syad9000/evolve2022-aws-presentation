@@ -1,0 +1,37 @@
+{
+	"<site name>" : [
+		{
+			"authorized_path" : "/",
+			"dest" : "",
+			"type" : "test"
+		}
+	],
+	"Example1" : [
+		{
+			"authorized_path" : "/",
+			"dest" : "https://vue.domain-account.com/.build/",
+			"type" : "redirect"
+		}
+	],
+	"Example2" : [
+		{
+			"authorized_path" : "/some/path/",
+			"dest" : [ "webmaster1@example.edu", "webmaster2@example.edu"],
+			"type" : "email"
+		},
+		{
+			"authorized_path" : "/_resources/admin/",
+			"dest" : "",
+			"type" : "s3bucket",
+			"folder" : "scripts"
+		}
+	],
+	"Example3" : [
+		{
+			"authorized_path" : "/",
+			"dest" : "",
+			"type" : "codecommit",
+			"folder" : "phibetakappastatic"
+		}
+	]
+}
