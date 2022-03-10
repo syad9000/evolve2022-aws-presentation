@@ -12,8 +12,8 @@ $ sudo installer -pkg AWSCLIV2.pkg -target /
 ```
 
 ## Configure AWS CLI
-https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html
-https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-creds-create
+* https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html
+* https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-creds-create
 
 1. Create a key pair in the AWS Management Console's IAM console https://console.aws.amazon.com/iam/
 2. Export as a CSV file to your home directory. Have it opened so that you can access the Access Key ID and  Secret Access Key
@@ -28,12 +28,12 @@ Default output format [None]: text|json
 # Creating PHP Lambdas
 1. To use the Bref PHP library to install/run Lambdas on AWS, you will need to install node. Get it at https://nodejs.org/en/download/
 2. Upgrade PHP to >= 7.3
-   (https://formulae.brew.sh/formula/php)[https://formulae.brew.sh/formula/php]
+   https://formulae.brew.sh/formula/php
    * Latest brew install php@8.1
    * older version: brew install php@7.4
    
 3. Install Composer
-   (https://getcomposer.org/download/)[https://getcomposer.org/download/]
+   https://getcomposer.org/download/
 
 ```
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -43,7 +43,7 @@ php -r "unlink('composer-setup.php');"
 ```
 
 4. Install Bref (and AWS libraries)
-   (https://bref.sh/docs/installation.html)[https://bref.sh/docs/installation.html]
+   https://bref.sh/docs/installation.html
    ```
    # Install the node serverless module
    npm install -g serverless
