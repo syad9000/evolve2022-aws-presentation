@@ -9,7 +9,7 @@
 	"Example1" : [
 		{
 			"authorized_path" : "/",
-			"dest" : "https://vue.domain-account.com/.build/",
+			"dest" : "https://example.edu/news/aggregate.php",
 			"type" : "redirect"
 		}
 	],
